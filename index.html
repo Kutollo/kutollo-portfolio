@@ -40,16 +40,27 @@
   </section>
 
   <!-- Contact Form -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form id="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    <p id="form-status"></p>
-  </section>
+<section id="contact">
+  <h2>Contact Me</h2>
+  <form action="https://formsubmit.co/kutollochix@gmail.com" method="POST">
+    <!-- Name Input -->
+    <input type="text" name="name" placeholder="Your Name" required />
+    
+    <!-- Email Input -->
+    <input type="email" name="email" placeholder="Your Email" required />
+    
+    <!-- Message Box -->
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    
+    <!-- Disable CAPTCHA -->
+    <input type="hidden" name="_captcha" value="false">
+    
+    <!-- Redirect After Submit (Optional) -->
+    <input type="hidden" name="_next" value="https://kutollochiloane.co.za/thank-you.html">
+
+    <button type="submit">Send Message</button>
+  </form>
+</section>
 
   <!-- Script -->
   <script src="script.js"></script>
