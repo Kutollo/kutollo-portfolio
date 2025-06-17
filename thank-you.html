@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  
+  <!-- This line automatically redirects the page to index.html after 5 seconds -->
+  <meta http-equiv="refresh" content="5;url=index.html" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thank You</title>
+  
+  <!-- Optional: Link to your main CSS file if you want to apply your site-wide styles -->
+  <link rel="stylesheet" href="style.css" />
+  
+  <!-- Inline styles for this page only -->
+  <style>
+    /* Basic body style */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Main container for the message */
+    .thank-you {
+      background: white;
+      padding: 60px 20px;
+      max-width: 600px;
+      margin: 100px auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1); /* subtle shadow */
+    }
+
+    /* Heading text color */
+    .thank-you h1 {
+      color: #003366;
+      margin-bottom: 20px;
+    }
+
+    /* Message text style */
+    .thank-you p {
+      font-size: 18px;
+      color: #333;
+    }
+
+    /* Button style */
+    .thank-you a {
+      display: inline-block;
+      margin-top: 30px;
+      background-color: #003366;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    /* Button hover effect */
+    .thank-you a:hover {
+      background-color: #005599;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Main container with thank-you message -->
+  <div class="thank-you">
+    <h1>Thank You!</h1>
+    
+    <!-- You can change this message anytime -->
+    <p>Your message has been sent successfully.</p>
+    
+    <!-- Text to let the user know they're being redirected -->
+    <p>Redirecting to homepage in a few seconds...</p>
+    
+    <!-- Manual fallback button in case redirect doesn't work -->
+    <a href="index.html">Back to Home</a>
+  </div>
+
+</body>
+</html>
