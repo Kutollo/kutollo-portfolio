@@ -3,99 +3,230 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kutollo Chiloane – Mechanical Engineer</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Kutollo C. | Mechanical Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --main: #512da8;
+      --accent: #9575cd;
+      --bg: #f4f4f9;
+      --text: #1a1a1a;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2rem;
+      position: sticky;
+      top: 0;
+      background: white;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      z-index: 99;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--main);
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--main);
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1581093588401-01a1b730b8c7?auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
+      height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      color: white;
+      padding: 2rem;
+      animation: fadeIn 2s ease;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: var(--accent);
+      min-height: 2.2rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      padding: 0.9rem 1.8rem;
+      background: var(--main);
+      color: white;
+      border: none;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      margin: 0 0.5rem;
+      transition: background 0.3s;
+    }
+
+    .btn.secondary {
+      background: transparent;
+      border: 2px solid white;
+    }
+
+    .btn:hover {
+      background: var(--accent);
+    }
+
+    /* Typing animation */
+    .cursor {
+      display: inline-block;
+      background: white;
+      width: 2px;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero h2 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
 </head>
 <body>
-
-  <!-- Hero Section -->
-  <header id="hero">
-    <h1>Kutollo Chiloane</h1>
-    <p>Mechanical Engineering Graduate | University of Johannesburg</p>
-    <a href="Kutollo_Chiloane_CV_2025.pdf" download>Download My CV</a>
-    <a href="#contact">Contact Me</a>
+  <!-- Header -->
+  <header>
+    <div class="logo-container">
+      <img src="assets/logo.png" alt="Kutollo Logo" class="logo">
+      <span class="site-name">Kutollo C.</span>
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <!-- About Me -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I'm a final-year Mechanical Engineering student at UJ with a passion for practical problem-solving and design.</p>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Hello, I'm <span class="highlight">Kutollo C.</span></h1>
+      <h2><span class="typed-text"></span><span class="cursor">&nbsp;</span></h2>
+      <p>Driven by precision. Powered by purpose. Built to create impact in engineering design and innovation.</p>
+      <div class="buttons">
+        <a href="#projects" class="btn">View Projects</a>
+        <a href="Kutollo_CV.pdf" target="_blank" class="btn secondary">Download CV</a>
+      </div>
+    </div>
   </section>
 
-  <!-- Skills -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>SolidWorks, AutoCAD</li>
-      <li>Python, MATLAB</li>
-      <li>CFD, Technical Drawing</li>
-      <li>Punctual, Detail-Oriented, Team Player</li>
-    </ul>
-  </section>
+  <!-- Inline JavaScript -->
+  <script>
+    const typedText = document.querySelector(".typed-text");
+    const cursor = document.querySelector(".cursor");
 
-  <!-- Projects Section -->
-<section id="projects">
-  <h2>Projects</h2>
+    const words = ["Mechanical Engineer", "Problem Solver", "Design Thinker", "Team Leader"];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let typingDelay = 120;
+    let erasingDelay = 80;
+    let newWordDelay = 2000;
 
-  <!-- Project Card -->
-  <div class="card">
-    <h3>Automatic Seed Sowing Robot</h3>
-    <p>A robot designed to plant seeds evenly on uneven terrain. Includes adjustable spacing and ploughing depth.</p>
-    <a href="files/seed_robot.pdf" target="_blank">View Project</a>
-    <img src="qrcodes/seed_robot_qr.png" alt="QR Code for Seed Robot" width="100">
-  </div>
+    function type() {
+      if (charIndex < words[wordIndex].length) {
+        typedText.textContent += words[wordIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, typingDelay);
+      } else {
+        setTimeout(erase, newWordDelay);
+      }
+    }
 
-  <div class="card">
-    <h3>Aerofoil CFD Simulation</h3>
-    <p>Simulated different aerofoils to study lift and drag performance using CFD tools.</p>
-    <a href="files/aerofoil_simulation.pdf" target="_blank">View Project</a>
-    <img src="qrcodes/aerofoil_qr.png" alt="QR Code for Aerofoil" width="100">
-  </div>
-</section>
+    function erase() {
+      if (charIndex > 0) {
+        typedText.textContent = words[wordIndex].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(erase, erasingDelay);
+      } else {
+        wordIndex = (wordIndex + 1) % words.length;
+        setTimeout(type, 500);
+      }
+    }
 
-<!-- Certificates Section -->
-<section id="certificates">
-  <h2>Certificates</h2>
-
-  <!-- Certificate Card -->
-  <div class="card">
-    <h3>Python Bootcamp – GRIT Lab Africa</h3>
-    <p>Completed problem-solving and algorithm training in Python.</p>
-    <a href="files/grit_certificate.pdf" target="_blank">View Certificate</a>
-    <img src="qrcodes/grit_qr.png" alt="QR Code for Certificate" width="100">
-  </div>
-</section>
-
-  <!-- Daily Quote -->
-  <section id="daily-quote">
-    <h2>Kutollo’s Daily Quote</h2>
-    <blockquote id="quote-box">"Loading quote..."</blockquote>
-  </section>
-
-  <!-- Contact Form -->
-<section id="contact">
-  <h2>Contact Me</h2>
-  <form action="https://formsubmit.co/kutollochix@gmail.com" method="POST">
-    <!-- Name Input -->
-    <input type="text" name="name" placeholder="Your Name" required />
-    
-    <!-- Email Input -->
-    <input type="email" name="email" placeholder="Your Email" required />
-    
-    <!-- Message Box -->
-    <textarea name="message" placeholder="Your Message" required></textarea>
-    
-    <!-- Disable CAPTCHA -->
-    <input type="hidden" name="_captcha" value="false">
-    
-    <!-- Redirect After Submit (Optional) -->
-    <input type="hidden" name="_next" value="https://kutollo.github.io/kutollo-portfolio/thank-you.html">
-
-    <button type="submit">Send Message</button>
-  </form>
-</section>
-
-  <!-- Script -->
-  <script src="script.js"></script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (words.length) setTimeout(type, 1000);
+    });
+  </script>
 </body>
 </html>
