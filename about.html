@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | Kutollo C.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --main: #0d47a1;
+      --accent: #64b5f6;
+      --bg: #e3f2fd;
+      --text: #0a0a0a;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2rem;
+      position: sticky;
+      top: 0;
+      background: white;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      z-index: 99;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .site-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--main);
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--main);
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: var(--main);
+      text-align: center;
+    }
+
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .profile-pic {
+      flex: 1;
+      text-align: center;
+    }
+
+    .profile-pic img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .about-text {
+      flex: 2;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .subsection {
+      margin-top: 3rem;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .skill-item {
+      background: #f0f4ff;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    blockquote {
+      font-style: italic;
+      padding: 1.5rem;
+      margin-top: 3rem;
+      background: #f5faff;
+      border-left: 4px solid var(--main);
+      text-align: center;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 2rem;
+      background: var(--main);
+      color: white;
+      padding: 0.8rem 2rem;
+      border-radius: 25px;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .about-container {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo-container">
+      <img src="logo.jpg" alt="Kutollo Logo" class="logo">
+      <span class="site-name">Kutollo Chiloane <em>MechEng</em></span>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-container">
+      <div class="profile-pic">
+        <img src="kutollo.jpg" alt="Kutollo Chiloane" />
+      </div>
+      <div class="about-text">
+        <p>
+          I’m <strong>Kutollo Chiloane</strong>, a final-year Mechanical Engineering student at the University of Johannesburg.
+          I am passionate about design, systems thinking, and contributing to sustainable innovation through engineering.
+        </p>
+        <p>
+          I’m currently growing my technical and professional skills and have completed the full ECSA Graduate Attributes program to prepare for future registration.
+        </p>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="subsection">
+      <h3 class="section-title">🎓 Education</h3>
+      <ul>
+        <li><strong>BEngTech in Mechanical Engineering</strong> – University of Johannesburg (2022–2025)</li>
+        <li><strong>Planned: BEngTech (Hons)</strong> – University of Johannesburg (2026)</li>
+      </ul>
+    </div>
+
+    <!-- Experience -->
+    <div class="subsection">
+      <h3 class="section-title">💼 Experience</h3>
+      <p>
+        I currently do not have formal work experience, but I am ready and open to learn and gain practical engineering exposure.
+        My academic projects and leadership roles have developed my teamwork and problem-solving ability.
+      </p>
+    </div>
+
+    <!-- ECSA Graduate Attributes -->
+    <div class="subsection">
+      <h3 class="section-title">📘 ECSA Graduate Attributes</h3>
+      <ul>
+        <li><strong>GA1:</strong> Problem Solving</li>
+        <li><strong>GA2:</strong> Scientific & Engineering Knowledge</li>
+        <li><strong>GA3:</strong> Engineering Design</li>
+        <li><strong>GA4:</strong> Investigations & Experiments</li>
+        <li><strong>GA5:</strong> Use of Engineering Tools</li>
+        <li><strong>GA6–GA12:</strong> Ethics, Communication, Teamwork & Lifelong Learning</li>
+      </ul>
+    </div>
+
+    <!-- Skills -->
+    <div class="subsection">
+      <h3 class="section-title">🛠️ Skills</h3>
+      <div class="skills-grid">
+        <div class="skill-item">SolidWorks</div>
+        <div class="skill-item">AutoCAD</div>
+        <div class="skill-item">MATLAB</div>
+        <div class="skill-item">Problem Solving</div>
+        <div class="skill-item">Design Thinking</div>
+        <div class="skill-item">Leadership</div>
+      </div>
+    </div>
+
+    <!-- Quote -->
+    <blockquote>
+      “Your future is not just your own — build today so those who come after you can rise higher, dream bigger, and go further.”<br> — <strong>Kutollo C.</strong>
+    </blockquote>
+
+    <!-- CV -->
+    <div style="text-align: center;">
+      <a href="Kutollo_CV.pdf" class="btn">📄 Download CV</a>
+    </div>
+  </section>
+
+</body>
+        </html>
